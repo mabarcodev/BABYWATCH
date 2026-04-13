@@ -1,0 +1,5 @@
+{
+  "name": "BabyWatch P2P Secure",
+  "description": "Monitor de bebés seguro y privado mediante conexión P2P directa. Desarrollado por Manuel Barco.",
+  "requestFramePermissions": ["camera", "microphone"]
+}
