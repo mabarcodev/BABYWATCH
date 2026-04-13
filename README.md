@@ -23,24 +23,41 @@ Desarrollado por **[Manuel Barco](https://github.com/mabarcodev)**.
 - **Iconos:** Lucide React
 - **Backend:** Node.js + Express
 
-## 🚀 Cómo empezar
+## 🛡️ ¿Es seguro usar un host público?
 
-### Requisitos
-- Node.js instalado en tu equipo.
+**Sí, absolutamente.** BabyWatch utiliza el servidor (ya sea en Render o en tu PC) únicamente para la **señalización** (el "apretón de manos" inicial entre dispositivos). 
 
-### Instalación
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/mabarcodev/babywatch-p2p.git
-   ```
-2. Instala las dependencias:
-   ```bash
-   npm install
-   ```
-3. Inicia el servidor de desarrollo:
-   ```bash
-   npm run dev
-   ```
+Una vez que los dispositivos se encuentran:
+1.  Se establece un túnel **P2P (Peer-to-Peer)** directo.
+2.  El flujo de vídeo y audio viaja **directamente** de un móvil a otro.
+3.  Los datos están **cifrados de extremo a extremo** mediante WebRTC.
+4.  **Nada de vídeo pasa por el servidor**, por lo que tu privacidad es total independientemente de dónde esté alojada la web.
+
+---
+
+## 🚀 Despliegue (Uso recomendado)
+
+Para que no tengas que ejecutar comandos cada vez, puedes tener tu propia instancia online gratuita:
+
+### Opción: Render.com (Gratis)
+1.  Haz un **Fork** de este repositorio.
+2.  En [Render.com](https://render.com), crea un **Web Service** conectado a tu repo.
+3.  Configuración:
+    -   **Build Command:** `npm install && npm run build`
+    -   **Start Command:** `node server.ts`
+4.  Usa la URL que te proporcione Render en tus dispositivos.
+
+---
+
+## 🛠️ Instalación Local (Avanzado)
+
+Si prefieres ejecutarlo 100% offline en tu red local:
+
+1.  Clona el repositorio e instala dependencias: `npm install`
+2.  Inicia el servidor: `npm run dev`
+3.  Accede desde tus dispositivos usando la IP local de tu ordenador (la app te la mostrará en el menú de ayuda).
+
+---
 
 ## 📖 Instrucciones de Uso
 
